@@ -15,23 +15,27 @@ function toggleMenu() {
 
 toggleBtn.addEventListener("click", toggleMenu);
 
-allSubMenus.forEach(function (curr) {
-  let currSubMenu = curr.querySelector(".sub-menu");
-  curr.addEventListener("mouseover", function () {
-    //If adding more sub-menus create a check to see if other sub menus are opened before opening a new sub menu
-
-    currSubMenu.classList.add("sub-menu-active");
-  });
-
-  curr.addEventListener("mouseout", function () {
-    currSubMenu.classList.remove("sub-menu-active");
-  });
-});
-
-window.onscroll = function () {
-  if (window.pageYOffset >= menu.offsetTop) {
-    nav.classList.add("sticky");
-  } else {
-    nav.classList.remove("sticky");
-  }
+const isTouchDevice = () => {
+  return window.matchMedia("(pointer: coarse)").matches;
 };
+
+allSubMenus.forEach(function (curr) {
+  if (isTouchDevice()) {
+    curr.addEventListener("click", function () {
+      currSubMenu.classList.toggle("sub-menu-active");
+    });
+  } else {
+    let currSubMenu = curr.querySelector(".sub-menu");
+    curr.addEventListener("mouseover", function () {
+      //If adding more sub-menus create a check to see if other sub menus are opened before opening a new sub menu
+
+      currSubMenu.classList.add("sub-menu-active");
+    });
+
+    curr.addEventListener("mouseout", function () {
+      currSubMenu.classList.remove("sub-menu-active");
+    });
+
+    curr.addEventListener("click", function () {});
+  }
+});

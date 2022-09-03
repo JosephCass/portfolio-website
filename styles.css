@@ -15,8 +15,8 @@ nav {
   width: 100%;
   background-color: rgb(35, 35, 35);
   padding: 0 1.5rem;
-
-  /* font-size: 16px; */
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
 }
 
 li,
@@ -123,12 +123,6 @@ a:hover,
   border-top: 1px solid blue;
 }
 
-nav.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
 /* main content css */
 
 .main-content {
@@ -139,6 +133,8 @@ nav.sticky {
 
 .about {
   max-width: 80%;
+  /* padding-top: 4rem; */
+  padding-bottom: 3rem;
 }
 
 .about-header {
@@ -147,12 +143,12 @@ nav.sticky {
   text-transform: uppercase;
   font-weight: 700;
   color: rgb(35, 35, 35);
-  padding-left: 6rem;
+  padding-left: 3rem;
   padding-bottom: 1rem;
 }
 
 .about-bio {
-  padding-left: 6rem;
+  padding-left: 3rem;
   font-size: 1rem;
   font-family: "Ubuntu", sans-serif;
   color: white;
