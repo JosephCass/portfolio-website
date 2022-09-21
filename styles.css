@@ -77,6 +77,8 @@ a:hover,
 .toggle-img {
   width: 2rem;
   height: 2rem;
+  filter: invert(100%) sepia(1%) saturate(2372%) hue-rotate(186deg)
+    brightness(105%) contrast(94%);
 }
 
 .toggle {
@@ -129,12 +131,16 @@ a:hover,
   background-color: gray;
   height: 100%;
   padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about {
-  max-width: 80%;
-  /* padding-top: 4rem; */
-  padding-bottom: 3rem;
+  max-width: 90%;
+  background-color: rgb(35, 35, 35);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .about-header {
@@ -142,24 +148,169 @@ a:hover,
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: rgb(35, 35, 35);
-  padding-left: 3rem;
-  padding-bottom: 1rem;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
 }
 
 .about-bio {
-  padding-left: 3rem;
+  padding: 1rem;
   font-size: 1rem;
   font-family: "Ubuntu", sans-serif;
   color: white;
-  padding-bottom: 1rem;
 }
 
 /* @media all and (min-width: 400px) {
   body { font-size: ;}
 } */
 
+.skills {
+  max-width: 90%;
+  background-color: rgb(35, 35, 35);
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+}
+
+.skills-display {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+.tech-stacks-container {
+  /* width: 100%; */
+  background-color: rgb(200, 200, 200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 8px 7px 0px 0px rgb(255, 255, 255);
+  -webkit-box-shadow: 8px 7px 0px 0px rgb(255, 255, 255);
+  -moz-box-shadow: 8px 7px 0px 0px rgb(255, 255, 255);
+}
+
+.tech-heading {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.tech-subheading {
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: #111;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.stacks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.tech-logo {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.tech-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.projects {
+  max-width: 90%;
+  background-color: rgb(35, 35, 35);
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-header {
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-title-text {
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.8rem;
+}
+
+.project-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-link {
+  color: black;
+  padding: 1rem;
+  background-color: white;
+}
+
 @media all and (min-width: 700px) {
+  :root {
+    font-size: 20px;
+  }
+
   .logo-link {
     font-size: 1.5rem;
   }
@@ -170,6 +321,16 @@ a:hover,
 
   .about-bio {
     font-size: 1.5rem;
+  }
+
+  .skills-display {
+    flex-direction: row;
+  }
+
+  .project-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
   }
 }
 
@@ -218,5 +379,11 @@ a:hover,
 
   .about-bio {
     font-size: 2rem;
+  }
+
+  .project-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
   }
 }
